@@ -8,7 +8,7 @@ node {
     }
     stage('Test') {
         image.inside {
-            sh "grep 'ENV PACKET_FORWARDER_VERSION' Dockerfile | awk 'NF>1{print \$NF}' > version"
+            sh "grep 'ENV PACKET_FORWARDER_VERSION' Dockerfile | tr -d '\r' | awk '//{print \$3}' > version"
             sh 'ls -al'
         }
     }
