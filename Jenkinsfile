@@ -4,7 +4,7 @@ node {
         echo 'Building..'
         checkout scm
         docker.image('multiarch/qemu-user-static:register').run()
-        image = docker.build("iotba/packet_forwarder")
+        image = docker.build("iotba/rpi-packet_forwarder")
     }
     stage('Test') {
         image.inside {
