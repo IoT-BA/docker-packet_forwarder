@@ -11,5 +11,3 @@ sed -i "s/\(\"push_timeout_ms\":\s\)\w*/\1$PACKET_FORWARDER_PUSH_TIMEOUT_MS/g" .
 sed -i "s/\(\"forward_crc_valid\":\s\)\w*/\1$PACKET_FORWARDER_FORWARD_CRC_VALID/g" ./global_conf.json
 sed -i "s/\(\"forward_crc_error\":\s\)\w*/\1$PACKET_FORWARDER_FORWARD_CRC_ERROR/g" ./global_conf.json
 sed -i "s/\(\"forward_crc_disabled\":\s\)\w*/\1$PACKET_FORWARDER_FORWARD_CRC_DISABLED/g" ./global_conf.json
-
-cat ./global_conf.json
